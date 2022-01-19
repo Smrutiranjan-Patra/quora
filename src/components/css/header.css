@@ -50,10 +50,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1%;
+  padding: 1% 2%;
   width: 20%;
   margin: 0 8px;
   box-sizing: border-box;
+}
+
+.icon-div:hover {
+  background-color: rgb(245, 240, 240);
 }
 
 .search-bar {
