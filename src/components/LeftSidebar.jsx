@@ -1,4 +1,4 @@
-import "./LeftSidebar.css";
+import "./css/LeftSidebar.css";
 import { leftSideBarData } from "../leftSidebardata.js";
 
 export const LeftSidebar = () => {
