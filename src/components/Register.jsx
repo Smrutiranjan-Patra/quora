@@ -1,18 +1,28 @@
-
 import React, { useState } from "react";
 import "./register.css";
-
+import { useNavigate } from "react-router-dom";
 export const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  let navigate = useNavigate();
   const signIn = () => {
-   
+    console.log("hello");
+    fetch("https://localhost:2333/auth/google")
+      .then((res) => {
+        return res.json();
+      })
+      .then((r) => {
+        console.log(r);
+        navigate("/home");
+        return r;
+      })
+      .then((e) => {
+        console.log(e);
+      });
   };
 
-const handleSignIn = (e) => {
-  e.preventDefault();
-
-
+  const handleSignIn = (e) => {
+    e.preventDefault();
   };
 
   return (
@@ -26,7 +36,6 @@ const handleSignIn = (e) => {
         </div>
         <div className="register__desc">
           <p>A Place to Share knowledge and better understand the world</p>
-      
         </div>
         <div className="register__middle">
           <div className="register__authOptions">
@@ -36,7 +45,9 @@ const handleSignIn = (e) => {
                 src="https://media-public.canva.com/MADnBiAubGA/3/screen.svg"
                 alt=""
               />
-              <span onClick={signIn}>Continue With Google</span>
+              <a href="http://localhost:2333/auth/google">
+                Continue With Google
+              </a>
             </div>
             <div className="register__authOption">
               <img
@@ -47,13 +58,10 @@ const handleSignIn = (e) => {
               <span>Continue With Facebook</span>
             </div>
             <div className="register__authDesc">
-              <p>By continuing you indicate that you agree to Quora’s {" "}
-              <span>
-                  Terms of Service{" "}
-                </span> and  {" "}
-                <span>
-                Privacy Policy
-                </span>.</p>
+              <p>
+                By continuing you indicate that you agree to Quora’s{" "}
+                <span>Terms of Service </span> and <span>Privacy Policy</span>.
+              </p>
             </div>
           </div>
           <div className="register__emailPass">
@@ -61,28 +69,28 @@ const handleSignIn = (e) => {
               <h4>Login</h4>
             </div>
             <div className="register__inputFields">
-                <div className="register__inputField"> 
-                  <h4>Email</h4>
-                </div>
-                <div className="register__inputField">
-                  <input
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    type="text"
-                    placeholder="Email"
-                  />
-                </div>
-                <div className="register__inputField">
+              <div className="register__inputField">
+                <h4>Email</h4>
+              </div>
+              <div className="register__inputField">
+                <input
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  type="text"
+                  placeholder="Email"
+                />
+              </div>
+              <div className="register__inputField">
                 <h4>Password</h4>
-                </div>
-                <div className="register__inputField">
-                  <input
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    type="password"
-                    placeholder="Password"
-                  />
-                </div>
+              </div>
+              <div className="register__inputField">
+                <input
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  type="password"
+                  placeholder="Password"
+                />
+              </div>
             </div>
             <div className="register__forgButt">
               <small>Forgot Password?</small>
@@ -91,7 +99,8 @@ const handleSignIn = (e) => {
           </div>
         </div>
         <div className="register__lang">
-          <p>বাংলা</p>{">"} {" "}<p>हिन्दी</p> {">"}
+          <p>বাংলা</p>
+          {">"} <p>हिन्दी</p> {">"}
         </div>
         <div className="register__footer">
           <p>About .</p>
@@ -106,4 +115,4 @@ const handleSignIn = (e) => {
       </div>
     </div>
   );
-}
+};
