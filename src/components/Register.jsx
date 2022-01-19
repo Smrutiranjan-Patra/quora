@@ -1,16 +1,16 @@
 
 import React, { useState } from "react";
-import "./register.css";
+import "./css/register.css";
 
 export const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const signIn = () => {
-   
+
   };
 
-const handleSignIn = (e) => {
-  e.preventDefault();
+  const handleSignIn = (e) => {
+    e.preventDefault();
 
 
   };
@@ -26,7 +26,7 @@ const handleSignIn = (e) => {
         </div>
         <div className="register__desc">
           <p>A Place to Share knowledge and better understand the world</p>
-      
+
         </div>
         <div className="register__middle">
           <div className="register__authOptions">
@@ -48,11 +48,11 @@ const handleSignIn = (e) => {
             </div>
             <div className="register__authDesc">
               <p>By continuing you indicate that you agree to Quora’s {" "}
-              <span>
+                <span>
                   Terms of Service{" "}
                 </span> and  {" "}
                 <span>
-                Privacy Policy
+                  Privacy Policy
                 </span>.</p>
             </div>
           </div>
@@ -61,28 +61,28 @@ const handleSignIn = (e) => {
               <h4>Login</h4>
             </div>
             <div className="register__inputFields">
-                <div className="register__inputField"> 
-                  <h4>Email</h4>
-                </div>
-                <div className="register__inputField">
-                  <input
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    type="text"
-                    placeholder="Email"
-                  />
-                </div>
-                <div className="register__inputField">
+              <div className="register__inputField">
+                <h4>Email</h4>
+              </div>
+              <div className="register__inputField">
+                <input
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  type="text"
+                  placeholder="Email"
+                />
+              </div>
+              <div className="register__inputField">
                 <h4>Password</h4>
-                </div>
-                <div className="register__inputField">
-                  <input
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    type="password"
-                    placeholder="Password"
-                  />
-                </div>
+              </div>
+              <div className="register__inputField">
+                <input
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  type="password"
+                  placeholder="Password"
+                />
+              </div>
             </div>
             <div className="register__forgButt">
               <small>Forgot Password?</small>
