@@ -1,0 +1,4 @@
+const SAVE_USER = 'SAVE_USER';
+const SAVE_TOKEN = 'SAVE_TOKEN';
+
+export {SAVE_TOKEN, SAVE_USER};
