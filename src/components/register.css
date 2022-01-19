@@ -1,0 +1,217 @@
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120vh;
+  background: url("https://qsf.fs.quoracdn.net/-4-ans_frontend_assets.images.home_page_bg_desktop.png-26-4770753d59b970e1.png");
+  background-size: cover;
+}
+
+.register__container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 0 0;
+  width: 700px;
+  height: 550px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.register__logo {
+  display: flex;
+  justify-content: center;
+}
+.register__logo img {
+  width: 200px;
+}
+
+.register__desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5px;
+}
+.register__desc > h3 {
+  margin-top: 10px;
+  text-align: center;
+  font-size: xx-large;
+  font-family: "Cedarville Cursive", cursive;
+}
+.register__desc > p {
+  color: #63647f;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.register__middle {
+  display: flex;
+  margin: 10px 15px 0;
+}
+
+.register__authOptions {
+  display: flex;
+  flex: 0.5;
+  flex-direction: column;
+  padding: 20px;
+  border-right: 1px solid lightgray;
+}
+
+.register__authOption {
+  display: flex;
+  align-items: center;
+  padding: 7px;
+  margin-bottom: 15px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register__authOption:hover {
+  background-color: rgb(226, 226, 226);
+}
+
+.register__authOption > img {
+  height: 30px;
+  width: 50px;
+  object-fit: contain;
+}
+
+.register__authOption > span {
+  margin-left: 11px;
+}
+
+.register__authDesc {
+  display: flex;
+  align-items: left;
+  padding: 7px 0;
+  margin-bottom: 15px;
+}
+.register__authDesc span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.register__authDesc > p {
+  font-size: small;
+  color: gray;
+}
+
+.register__emailPass {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: left;
+  padding: 20px;
+  flex: 0.5;
+  margin-left: 20px;
+}
+
+.register__label > h4 {
+  text-align: left;
+  margin-top: 0;
+  padding-bottom: 10px;
+  color: #63647f;
+  border-bottom: 1px solid lightgray;
+}
+
+.register__inputFields {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 5px;
+  margin-bottom: 10px;
+}
+
+.register__inputField > h4 {
+  text-align: left;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: black;
+}
+
+.register__inputField > input {
+  padding: 10px;
+  width: 92%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.register__inputField > input:focus {
+  outline: none !important;
+  border-color: blue;
+}
+
+.register__forgButt {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.register__forgButt > small {
+  color: gray;
+  cursor: pointer;
+}
+
+.register__forgButt > small:hover {
+  text-decoration: underline;
+}
+
+.register__forgButt > button {
+  padding: 9px 15px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  background-color: #2e69ff;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+.register__forgButt > button:hover {
+  background-color: #1550e6;
+}
+
+.register__lang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.register__lang > p {
+  color: gray;
+  margin-right: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.register__lang > p:hover {
+  color: gray;
+  margin-right: 5px;
+  text-decoration: underline;
+}
+
+.register__lang > .MuiSvgIcon-root {
+  color: gray;
+}
+
+.register__footer {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #f1f2f2;
+}
+
+.register__footer > p {
+  color: gray;
+  font-size: small;
+  cursor: pointer;
+}
+
+.register__footer > p:hover {
+  text-decoration: underline;
+}
