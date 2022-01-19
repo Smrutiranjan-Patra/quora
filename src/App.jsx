@@ -1,13 +1,17 @@
 import React from 'react'
-import Header from './components/header'
 import './App.css';
-import { Register } from "./components/Register";
+import Header from './components/header'
+// import { Register } from "./components/Register";
+import { MainQuora } from "./components/MainQuora.jsx";
+
+
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Header />
-      <Register />
+      {/* <Register /> */}
+      <MainQuora />
     </div>
   );
 }
