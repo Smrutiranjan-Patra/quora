@@ -1,11 +1,26 @@
 import React, { useState } from "react";
 import "./css/register.css";
+import { useNavigate } from "react-router-dom";
 
 export const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   let navigate = useNavigate();
-  const signIn = () => {};
+  const signIn = () => {
+    console.log("hello");
+    fetch("https://localhost:2333/auth/google")
+      .then((res) => {
+        return res.json();
+      })
+      .then((r) => {
+        console.log(r);
+        navigate("/home");
+        return r;
+      })
+      .then((e) => {
+        console.log(e);
+      });
+  };
 
   const handleSignIn = (e) => {
     e.preventDefault();

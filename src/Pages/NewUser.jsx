@@ -24,4 +24,5 @@ export const NewPage = () => {
         console.log("err:", err);
       });
   }, []);
+  return null;
 };
