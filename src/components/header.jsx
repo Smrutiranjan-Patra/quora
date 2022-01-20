@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./css/header.css";
 import mainlogo from "./Images/mainlogo.png";
 
@@ -9,6 +9,8 @@ import PersonIcon from "@mui/icons-material/Person";
 import CreateIcon from "@mui/icons-material/Create";
 import FeedIcon from "@mui/icons-material/Feed";
 import LanguageIcon from "@mui/icons-material/Language";
+
+
 
 export default function Header() {
   const iconStyle = {
@@ -46,7 +48,6 @@ export default function Header() {
               </div>
             </div>
             <div className="search-bar">
-              <input type="text" placeholder="Search Quora" />
             </div>
             <div className="user-logo">
               <img src="" alt="" />
