@@ -5,6 +5,7 @@ import { Header } from "../components/header";
 import { saveUser } from "../Redux/actions";
 import axios from "axios";
 import { MainQuora } from "../components/MainQuora";
+import { QApage } from "./QApage";
 export const HomePage = () => {
   const [user, setUser] = useState(null);
   const { email } = useParams();
@@ -30,6 +31,7 @@ export const HomePage = () => {
     <>
       <Header />
       <MainQuora />
+      {/* <QApage /> */}
     </>
   );
 };
