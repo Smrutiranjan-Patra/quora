@@ -4,7 +4,7 @@ import "./css/register.css";
 export const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
   const signIn = () => {};
 
   const handleSignIn = (e) => {
