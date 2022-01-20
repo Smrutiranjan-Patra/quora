@@ -7,9 +7,7 @@ import { Router } from "./Routes/Router";
 function App() {
   return (
     <div className="app">
-      {/* <Header />
-      <MainQuora /> */}
-      <Router />
+      <Header />
     </div>
   );
 }
