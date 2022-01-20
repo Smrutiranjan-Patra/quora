@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { Header } from "../components/header";
 import { saveUser } from "../Redux/actions";
 import axios from "axios";
-
+import { MainQuora } from "../components/MainQuora";
 export const HomePage = () => {
   const [user, setUser] = useState(null);
   const { email } = useParams();
@@ -29,6 +29,7 @@ export const HomePage = () => {
   return !user ? null : (
     <>
       <Header />
+      <MainQuora />
     </>
   );
 };
