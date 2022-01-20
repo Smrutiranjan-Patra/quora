@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import "./css/header.css";
 import mainlogo from "./Images/mainlogo.png";
+import { NavLink } from "react-router-dom";
 
 //icons
-import HomeIcon from "@mui/icons-material/Home";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import PersonIcon from "@mui/icons-material/Person";
-import CreateIcon from "@mui/icons-material/Create";
-import FeedIcon from "@mui/icons-material/Feed";
-import LanguageIcon from "@mui/icons-material/Language";
+// import HomeIcon from "@mui/icons-material/Home";
+// import NotificationsIcon from "@mui/icons-material/Notifications";
+// import PersonIcon from "@mui/icons-material/Person";
+// import CreateIcon from "@mui/icons-material/Create";
+// import FeedIcon from "@mui/icons-material/Feed";
+// import LanguageIcon from "@mui/icons-material/Language";
+
+
 
 export default function Header() {
   const iconStyle = {
@@ -27,34 +30,12 @@ export default function Header() {
           <div className="logo-box">
             <img src={mainlogo} alt="" />
           </div>
-          <div className="nav">
-            <div className="icon-box1">
-              <div className="icon-div">
-                <HomeIcon style={iconStyle} onClick={colorButton} />
-              </div>
-              <div className="icon-div">
-                <FeedIcon style={iconStyle} onClick={colorButton} />
-              </div>
-              <div className="icon-div">
-                <CreateIcon style={iconStyle} onClick={colorButton} />
-              </div>
-              <div className="icon-div">
-                <PersonIcon style={iconStyle} onClick={colorButton} />
-              </div>
-              <div className="icon-div">
-                <NotificationsIcon style={iconStyle} onClick={colorButton} />
-              </div>
-            </div>
-            <div className="search-bar">
-              <input type="text" placeholder="Search Quora" />
-            </div>
-            <div className="user-logo">
-              <img src="" alt="" />
-            </div>
-            <div className="icon-box2">
-              <LanguageIcon style={{ fontSize: "1.8em" }} />
-            </div>
-            <button className="question-btn"> Add Question</button>
+          <div className="Navbar">
+            <NavLink exact activeClassName="active-icon" to="/Home"></NavLink>
+            <NavLink exact activeClassName="active-icon" to="/following"></NavLink>
+            <NavLink exact activeClassName="active-icon" to="/answer"></NavLink>
+            <NavLink exact activeClassName="active-icon" to="/space"></NavLink>
+            <NavLink exact activeClassName="active-icon" to="/notification"></NavLink>
           </div>
         </div>
       </div>
