@@ -1,7 +1,7 @@
 import { LeftSidebar } from "./LeftSidebar.jsx";
 import { RightSidebar } from "./RightSidebar.jsx";
 import { Answer } from "./Answer";
-import "./MainQuora.css"
+import "./css/MainQuora.css"
 
 
 

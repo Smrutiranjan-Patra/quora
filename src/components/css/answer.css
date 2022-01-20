@@ -1,0 +1,127 @@
+.answer {
+  flex: 0.4;
+  padding: 0 20px;
+}
+.Quora_Box {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px;
+  border: 1px solid #cecedb;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Quora_Box:hover {
+  border: 1px solid #63647f;
+}
+.quora_info {
+  display: flex;
+  align-items: center;
+}
+
+.quora_info > h5 {
+  color: #93b2d7;
+  font-weight: 300px;
+  margin-left: 10px;
+}
+.quora_para {
+  display: flex;
+  margin-top: 1px;
+  color: #939598;
+  font-weight: bold;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #cecedb;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.post_1stdiv {
+  display: flex;
+  justify-content: space-between;
+}
+.post_info {
+  display: flex;
+  align-items: center;
+}
+.post_header {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  padding-top: 0px;
+}
+.post_header > h5 {
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+}
+.post_header > h5:hover {
+  text-decoration: underline;
+}
+.post_header > p {
+  padding: 0px;
+  margin: 0px;
+  color: #63647f;
+}
+.post_header span {
+  margin-left: 10px;
+  color: blue;
+}
+.post_header span:hover {
+  text-decoration: none;
+}
+.post_ques {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.post_ques h5 {
+  font-size: 15px;
+  padding: 0px;
+  margin: 0px;
+}
+.post_ques h5:hover {
+  text-decoration: underline;
+}
+.post_ques p {
+  padding: 0px;
+  margin: 0px;
+}
+.post_body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+.post_body > img {
+}
+.post_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.footer_left {
+  display: flex;
+}
+.footer_arrow {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 25px;
+  padding: 5px 10px;
+  width: 100px;
+  background-color: #cbcce6;
+  margin-right: 10px;
+}
+.footer_arrow > span {
+  margin-right: 10px;
+  padding-right: 20px;
+  border-right: 1px solid #63647f;
+}
+.MuiSvgIcon-root {
+  color: #63647f;
+}
