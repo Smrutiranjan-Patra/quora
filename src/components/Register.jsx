@@ -1,18 +1,29 @@
-
 import React, { useState } from "react";
 import "./css/register.css";
+import { useNavigate } from "react-router-dom";
 
 export const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  let navigate = useNavigate();
   const signIn = () => {
-
+    console.log("hello");
+    fetch("https://localhost:2333/auth/google")
+      .then((res) => {
+        return res.json();
+      })
+      .then((r) => {
+        console.log(r);
+        navigate("/home");
+        return r;
+      })
+      .then((e) => {
+        console.log(e);
+      });
   };
 
   const handleSignIn = (e) => {
     e.preventDefault();
-
-
   };
 
   return (
@@ -26,7 +37,6 @@ export const Register = () => {
         </div>
         <div className="register__desc">
           <p>A Place to Share knowledge and better understand the world</p>
-
         </div>
         <div className="register__middle">
           <div className="register__authOptions">
@@ -36,7 +46,9 @@ export const Register = () => {
                 src="https://media-public.canva.com/MADnBiAubGA/3/screen.svg"
                 alt=""
               />
-              <span onClick={signIn}>Continue With Google</span>
+              <a href="http://localhost:2333/auth/google">
+                Continue With Google
+              </a>
             </div>
             <div className="register__authOption">
               <img
@@ -47,13 +59,10 @@ export const Register = () => {
               <span>Continue With Facebook</span>
             </div>
             <div className="register__authDesc">
-              <p>By continuing you indicate that you agree to Quora’s {" "}
-                <span>
-                  Terms of Service{" "}
-                </span> and  {" "}
-                <span>
-                  Privacy Policy
-                </span>.</p>
+              <p>
+                By continuing you indicate that you agree to Quora’s{" "}
+                <span>Terms of Service </span> and <span>Privacy Policy</span>.
+              </p>
             </div>
           </div>
           <div className="register__emailPass">
@@ -91,7 +100,8 @@ export const Register = () => {
           </div>
         </div>
         <div className="register__lang">
-          <p>বাংলা</p>{">"} {" "}<p>हिन्दी</p> {">"}
+          <p>বাংলা</p>
+          {">"} <p>हिन्दी</p> {">"}
         </div>
         <div className="register__footer">
           <p>About .</p>
@@ -106,4 +116,4 @@ export const Register = () => {
       </div>
     </div>
   );
-}
+};

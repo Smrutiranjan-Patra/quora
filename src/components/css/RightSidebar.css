@@ -1,0 +1,39 @@
+.rightSidebar {
+  flex: 0.2;
+}
+.header {
+  border-bottom: 1px solid #cecedb;
+}
+.header > h4 {
+  align-items: left;
+  padding: 0px;
+}
+.rightSidebar_options {
+  display: flex;
+  cursor: pointer;
+  background-color: white;
+  flex-direction: column;
+}
+.sidebar__content {
+  display: flex;
+  padding: 5px 10px;
+  border-bottom: 1px solid #cecedb;
+}
+.sidebar__content > img {
+  height: 30px;
+  border-radius: 5px;
+}
+.sidebar__contentTitle {
+  margin-left: 15px;
+}
+.sidebar__contentTitle > h5 {
+  color: rgb(70, 68, 68);
+  margin: 0px;
+  padding: 0px;
+}
+.sidebar__contentTitle > p {
+  margin: 0px;
+  padding: 0px;
+  color: gray;
+  font-size: small;
+}

@@ -16,7 +16,7 @@ export default function Header() {
   const iconStyle = {
     height: "1.5em",
     fontSize: "1.8em",
-    color: "Black",
+    color: "Black"
   };
 
   const colorButton = (e) => {
@@ -62,3 +62,5 @@ export default function Header() {
     </>
   );
 }
+
+export { Header };
