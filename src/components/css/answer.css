@@ -162,6 +162,7 @@ body.active-modal {
 
 .modal,
 .overlay {
+  z-index: 10;
   width: 100vw;
   height: 100vh;
   top: 0;

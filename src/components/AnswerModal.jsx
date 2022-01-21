@@ -39,7 +39,7 @@ export function AnswerModal() {
         Answer
       </Button>
 
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal zIndex={10} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay bgColor="gray" />
         <ModalContent
           w="500px"
