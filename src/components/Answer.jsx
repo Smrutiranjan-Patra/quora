@@ -8,57 +8,108 @@ import ChatBubbleOutlineOutlinedIcon from "@material-ui/icons/ChatBubbleOutlineO
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
 import SendSharpIcon from '@mui/icons-material/SendSharp';
 import ClearSharpIcon from '@mui/icons-material/ClearSharp';
+import { useState } from "react";
 import {postData} from "../Post"
+import CloseIcon from '@mui/icons-material/Close';
+import ArrowRightSharpIcon from '@mui/icons-material/ArrowRightSharp';
+import PeopleOutlineOutlinedIcon from '@mui/icons-material/PeopleOutlineOutlined';
+import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
 
 export const Answer = () => {
-   
+    const [modal,setModal] = useState(false);
+    const toggleModal = () => {
+        setModal(!modal)
+    }
+    if(modal){
+        document.body.classList.add('active-modal')
+    }else{
+        document.body.classList.remove('active-modal')
+    }
+    // post show or hide
+    const [status,setStatus] = useState(true);
+  
     return (
         <div className="answer">
-            <div className="Quora_Box">
+            <div onClick={toggleModal} className="Quora_Box">
                 <div className="quora_info">
                     <Avatar />
                     <h5>UserName</h5>
                 </div>
                  <p className="quora_para">What do you want to ask or share? </p>
             </div>
+            {/* modal */}
+            {modal && (
+            <div className="modal">
+            <div className="overlay">
+                <div className="modal-content">
+                    <button className="close-modal" onClick={toggleModal}>
+                       <CloseIcon/>
+                    </button>
+                    <div className="header_modal">
+                        <h4>Add Question</h4>
+                        <h4>Add Post</h4>
+                    </div>
+                    <div className="section">
+                        <h4>Tips on getting good answers quickly</h4>
+                        <ul>
+                            <li>Make sure your question has not been asked already</li>
+                            <li>Keep your question short and to the point</li>
+                            <li>Double-check grammar and spelling</li>
+                        </ul>
+                    </div>
+                    <div className="user_icon">
+                    <Avatar />
+                    <ArrowRightSharpIcon/>
+                    <button><PeopleOutlineOutlinedIcon/>Public<KeyboardArrowDownOutlinedIcon/></button>
+                    </div>
+                    <input className="ques-type" type="text" placeholder="Start your question with what, How, why, etc"/>
+                
+                </div>
+            </div>
+            </div>
+            )}
+           
             {/* Post */}
-            {postData.map(d=>(
-                <div className="post">
-                <div className="post_1stdiv">
-                    <div className="post_info">
-                        <Avatar />
-                        <div className="post_header">
-                        <h5>{d.title} <span >Follow</span></h5>
-                        <p>Answered by <small >{d.answeredby} {" "} {d.timestamp} </small></p>
-                    </div>
-                    </div>
-                    <div className="delete">
-                        <ClearSharpIcon />
-                    </div>
-                </div>
-                    <div className="post_body">
-                        <div className="post_ques">
-                            <h5>{d.Question}</h5>
-                            <p>{d.des}</p>
-                        </div>
-                        <img src={d.image} alt="" />
-                    </div>
-                    <div className="post_footer">
-                        <div className="footer_left">
-                            <div className="footer_arrow">
-                                <ArrowUpwardOutlinedIcon /><span>{d.upVotes}</span>
-                                <ArrowDownwardOutlinedIcon />
-                            </div>
-                            <RepeatOutlinedIcon />1{" "}{" "}
-                            <ChatBubbleOutlineOutlinedIcon />4
-                        </div>
-                        <div className="icon_right">
-                            <SendSharpIcon />{" "}{" "}
-                            <MoreHorizOutlinedIcon />
-                        </div>
-                    </div>
-                </div>
-            ))}
+            {/* {
+                status?  <div className="post"><div/> :null
+            } */}
+                 {postData.map((d)=>(
+                   <div className="post">
+                         <div className="post_1stdiv">
+                             <div className="post_info">
+                                 <Avatar />
+                                 <div className="post_header">
+                                 <h5>{d.title} <span >Follow</span></h5>
+                                 <p>Answered by <small >{d.answeredby} {" "} {d.timestamp} </small></p>
+                             </div>
+                             </div>
+                             <div className="delete">
+                                <button onClick={()=>setStatus(false)}> <ClearSharpIcon /></button>
+                             </div>
+                         </div>
+                             <div className="post_body">
+                                 <div className="post_ques">
+                                     <h5>{d.Question}</h5>
+                                     <p>{d.des}</p>
+                                 </div>
+                                 <img src={d.image} alt="" />
+                             </div>
+                             <div className="post_footer">
+                                 <div className="footer_left">
+                                     <div className="footer_arrow">
+                                        <button className="fst_btn"> <ArrowUpwardOutlinedIcon /><span>{d.upVotes}</span></button>
+                                         <button className="sec_btn"><ArrowDownwardOutlinedIcon /></button>
+                                     </div>
+                                    <button className="btn_right"> <RepeatOutlinedIcon />1</button>
+                                    <button  className="btn_right"> <ChatBubbleOutlineOutlinedIcon />4</button>
+                                 </div>
+                                 <div className="icon_right">
+                                    <button  className="btn_right"> <SendSharpIcon /></button>
+                                     <button  className="btn_right"><MoreHorizOutlinedIcon /></button>
+                                 </div>
+                             </div>
+                         </div>
+                ))}
            
         </div>
     )
