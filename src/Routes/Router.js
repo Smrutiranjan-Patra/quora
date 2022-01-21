@@ -6,6 +6,7 @@ import {NewPage} from '../Pages/NewUser';
 import {MainQuora} from '../components/MainQuora';
 import {AnswerPage} from '../Pages/AnswerPage';
 import {QApage} from '../Pages/QApage';
+import Profile from '../Pages/Profile';
 function Router () {
   return (
     <div>
@@ -16,6 +17,7 @@ function Router () {
         <Route path="/profile/:email" element={<HomePage />} />
         <Route path="/createUser/:email" element={<NewPage />} />
         <Route path="/answers/:id" element={<AnswerPage />} />
+        <Route path="/profile" element={<Profile/>}/>
       </Routes>
     </div>
   );

@@ -1,0 +1,95 @@
+.border{
+    border: 1px solid white;
+    height: 650px;
+    width: 67%;
+    margin-left: 230px;
+    margin-right: 5px;
+    
+}
+.box1{
+    border: 1px solid white;
+    height: 240px;
+    width: 100%;
+    margin-right: 450px;
+   
+    
+}
+.box2{
+    border: 1px solid white;
+    height: 43px;;
+    width: 70%;
+    margin-right: 450px;
+    align-items: center;
+  
+}
+.box2 Tab{
+    float: left;
+    margin-left: 35px;
+    font-size: small;
+
+}
+.Profile{
+    float: left;
+}
+.box0{
+    float: left;
+    border: 1px solid white;
+    height: 60%;
+    width: 20%;
+}
+.pic{
+    margin-top: 10px;
+    float: left;
+}
+.profilename{
+    border: 1px solid white;
+    height: 40px;
+    width: 40%;
+    margin-left: 135px;
+    margin-top: 15px;
+    display: flex;
+   
+}
+.para p{
+    margin-top: 10px;
+    float: left;
+    font-size: small;
+    font-weight: 400;
+    margin-left: 15px;
+    font-style: normal;
+    color: grey;
+}
+.box3{
+    border: 1px solid white;
+    height: 100px;
+    width: 100px;
+    margin-left: 800px;
+    
+   
+}
+.sidebox{
+    float: right;
+    border: 1px solid white;
+    height: 180px;
+    width: 270px;
+}
+
+
+.para1{
+    margin-bottom: 100px;
+    
+}
+
+.bag p{
+    margin-left: 10px;
+}
+.knows{
+    border: 1px solid white;
+    height: 220px;
+    float: right;
+    width: 280px;
+   
+}
+.left{
+    float: right;
+}
