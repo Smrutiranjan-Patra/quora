@@ -1,0 +1,30 @@
+.sidebar {
+  flex: 0.2;
+  margin-top: 40px;
+}
+.sidebarOptions {
+  width: 70%;
+}
+.sidebarOption {
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+  cursor: pointer;
+  height: 20px;
+}
+.sidebar1stOption {
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  border-bottom: 1px solid #636363;
+}
+.first {
+  padding-top: 5px;
+  color: red !important ;
+  background-color: #f1e0e0;
+}
+.sidebar1stOption > p {
+  padding: 0;
+  margin: 0px;
+  font-weight: bold;
+}

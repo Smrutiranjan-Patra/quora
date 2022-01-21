@@ -1,5 +1,5 @@
 import "./css/answer.css";
-import {Post}  from "../Post";
+// import {Post}  from "../Post";
 import { Avatar} from "@material-ui/core";
 import ArrowUpwardOutlinedIcon from "@material-ui/icons/ArrowUpwardOutlined";
 import ArrowDownwardOutlinedIcon from "@material-ui/icons/ArrowDownwardOutlined";
@@ -11,7 +11,7 @@ import ClearSharpIcon from '@mui/icons-material/ClearSharp';
 import { useState } from "react";
 import {postData} from "../Post"
 import CloseIcon from '@mui/icons-material/Close';
-import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+// import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
