@@ -1,16 +1,18 @@
 import {Routes, Route} from 'react-router-dom';
-import {Header} from '../components/Header';
+import Header from '../components/header';
 import {Register} from '../components/Register';
 import {HomePage} from '../Pages/HomePage';
 import {NewPage} from '../Pages/NewUser';
 import {MainQuora} from '../components/MainQuora';
 import {AnswerPage} from '../Pages/AnswerPage';
+import {QApage} from '../Pages/QApage';
 function Router () {
   return (
     <div>
       <Routes>
-        <Route path="/home" element={<Header />} />
         <Route path="/" element={<Register />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/answer" element={<QApage />} />
         <Route path="/profile/:email" element={<HomePage />} />
         <Route path="/createUser/:email" element={<NewPage />} />
         <Route path="/answers/:id" element={<AnswerPage />} />

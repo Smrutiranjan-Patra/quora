@@ -21,7 +21,7 @@ export default function Header() {
             <img src={mainlogo} alt="" />
           </div>
           <div className="Navbar">
-            <NavLink exact activeClassName="active-icon" to="/Home">
+            <NavLink exact activeClassName="active-icon" to="/home">
               <AiOutlineHome className="icon" />
             </NavLink>
             <NavLink exact activeClassName="active-icon" to="/following">

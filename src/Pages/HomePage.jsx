@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { Header } from "../components/Header";
+import Header from "../components/header";
 import { saveUser } from "../Redux/actions";
 import axios from "axios";
 import { MainQuora } from "../components/MainQuora";
@@ -30,9 +30,9 @@ export const HomePage = () => {
   }, []);
   return !user ? null : (
     <>
-      {/* <Header />
-      <MainQuora /> */}
-      <QApage />
+      <Header />
+      <MainQuora />
+      {/* <QApage /> */}
       {/* <AnswerModal /> */}
     </>
   );
