@@ -6,13 +6,14 @@ import { saveUser } from "../Redux/actions";
 import axios from "axios";
 import { MainQuora } from "../components/MainQuora";
 import { QApage } from "./QApage";
+import { shallowEqual, useSelector } from "react-redux";
 import { AnswerModal } from "../components/AnswerModal";
+
 export const HomePage = () => {
   const [user, setUser] = useState(null);
-  const { email } = useParams();
-
+  const temp = useSelector((store) => store.userPresent);
+  let { email } = useParams();
   const dispatch = useDispatch();
-
   useEffect(() => {
     axios
       .get(`http://localhost:2333/users/profile/${email}`)
@@ -28,6 +29,7 @@ export const HomePage = () => {
         console.log("err:", err);
       });
   }, []);
+
   return !user ? null : (
     <>
       <Header />

@@ -7,11 +7,12 @@ const QuestionSchema = Schema (
       type: Date,
       default: Date.now (),
     },
+    images: [{type: String, required: false}],
     userId: {
       type: Schema.Types.ObjectId,
       ref: 'user',
-      required: 'true',
     },
+    answerIds: [{type: Schema.Types.ObjectId}],
   },
   {
     timeStamps: true,
