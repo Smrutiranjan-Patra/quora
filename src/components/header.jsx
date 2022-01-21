@@ -14,15 +14,6 @@ import { NavLink } from "react-router-dom";
 
 
 export default function Header() {
-  const iconStyle = {
-    height: "1.5em",
-    fontSize: "1.8em",
-    color: "Black"
-  };
-
-  const colorButton = (e) => {
-    console.log("working");
-  };
   return (
     <>
       <div className="header">
