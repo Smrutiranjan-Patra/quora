@@ -84,6 +84,7 @@ input:focus {
 }
 .gicon {
   font-size: 1.5em;
+  color: lightslategrey;
 }
 
 .button-box {

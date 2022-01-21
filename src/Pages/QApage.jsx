@@ -15,7 +15,7 @@ import "./styles.css";
 import { Heading, Divider } from "@chakra-ui/react";
 
 import { QaCard } from "../components/QAcard";
-import Header from "../components/header";
+import Header from "../components/Header";
 export const QApage = () => {
   return (
     <>
