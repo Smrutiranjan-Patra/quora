@@ -2,9 +2,15 @@ const mongoose = require ('mongoose');
 
 const PostSchema = new mongoose.Schema (
   {
-    user: {type: mongoose.Schema.Types.ObjectId, ref: 'user', required: true},
-    body: {type: String, required: false},
-    pic: {type: String, required: false},
+    title: {type: String},
+    answeredby: {type: String},
+    Question: {type: String},
+    des: {type: String},
+    image: {type: String},
+    upVotes: {type: Number},
+    // userID: {type: mongoose.Schema.Types.ObjectId, ref: 'user', required: true},
+    // body: {type: String, required: false},
+    // pic: {type: String, required: false},
   },
   {
     versionKey: false,

@@ -11,6 +11,16 @@ app.use (passport.initialize ());
 //"^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
 app.use (express.json ());
 // const productController = require ('./controllers/products.controller');
+
+const userController = require ('./controllers/user.controller');
+
+const questionController = require ('./controllers/questions.controller');
+const postController = require ('./controllers/post.controller');
+
+app.use ('/users', userController);
+app.use ('/post', postController);
+app.use ('/question', questionController);
+
 app.post (
   '/signup',
   body ('email').custom (async value => {
@@ -78,8 +88,5 @@ passport.serializeUser (function ({user, token}, done) {
 passport.deserializeUser (function (user, done) {
   done (err, user);
 });
-
-const userController = require ('./controllers/user.controller');
-app.use ('/users', userController);
 
 module.exports = app;

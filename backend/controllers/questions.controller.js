@@ -1,14 +1,14 @@
 const express = require ('express');
-
+console.log ('runnig');
 const router = express.Router ();
 
-const Post = require ('../models/post.model');
+const Question = require ('../models/question.model');
 
 router.post ('/', async (req, res) => {
   try {
-    const post = await Post.create (req.body);
+    const question = await Question.create (req.body);
 
-    return res.status (201).send (post);
+    return res.status (201).send (question);
   } catch (e) {
     return res.status (501).json ({message: e.message, status: 'Failed'});
   }
@@ -16,9 +16,9 @@ router.post ('/', async (req, res) => {
 
 router.get ('/', async (req, res) => {
   try {
-    const post = await Post.find ({});
+    const questions = await Question.find ({});
 
-    return res.status (201).json (post);
+    return res.status (201).json (questions);
   } catch (e) {
     return res.status (500).json ({message: e.message, status: 'Failed'});
   }
