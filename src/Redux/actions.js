@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {SAVE_TOKEN, SAVE_USER} from './actionTypes';
+import {SAVE_ID, SAVE_TOKEN, SAVE_USER} from './actionTypes';
 
 export const saveToken = payload => {
   return {
@@ -11,6 +11,13 @@ export const saveToken = payload => {
 export const saveUser = payload => {
   return {
     type: SAVE_USER,
+    payload,
+  };
+};
+
+export const saveID = payload => {
+  return {
+    type: SAVE_ID,
     payload,
   };
 };
