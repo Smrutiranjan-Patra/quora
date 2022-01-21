@@ -1,15 +1,9 @@
 import React from "react";
-import "./css/header.css";
-import mainlogo from "./Images/mainlogo.png";
 import { NavLink } from "react-router-dom";
 
-//icons
-// import HomeIcon from "@mui/icons-material/Home";
-// import NotificationsIcon from "@mui/icons-material/Notifications";
-// import PersonIcon from "@mui/icons-material/Person";
-// import CreateIcon from "@mui/icons-material/Create";
-// import FeedIcon from "@mui/icons-material/Feed";
-// import LanguageIcon from "@mui/icons-material/Language";
+import "./css/header.css";
+
+import mainlogo from "./Images/mainlogo.png";
 
 
 
