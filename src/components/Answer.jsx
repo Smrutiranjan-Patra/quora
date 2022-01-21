@@ -1,6 +1,6 @@
 import "./css/answer.css";
 import {Post}  from "../Post";
-import { Avatar } from "@material-ui/core";
+import { Avatar} from "@material-ui/core";
 import ArrowUpwardOutlinedIcon from "@material-ui/icons/ArrowUpwardOutlined";
 import ArrowDownwardOutlinedIcon from "@material-ui/icons/ArrowDownwardOutlined";
 import RepeatOutlinedIcon from "@material-ui/icons/RepeatOutlined";
@@ -11,9 +11,14 @@ import ClearSharpIcon from '@mui/icons-material/ClearSharp';
 import { useState } from "react";
 import {postData} from "../Post"
 import CloseIcon from '@mui/icons-material/Close';
-import ArrowRightSharpIcon from '@mui/icons-material/ArrowRightSharp';
-import PeopleOutlineOutlinedIcon from '@mui/icons-material/PeopleOutlineOutlined';
-import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import {AddQuestion}  from "./AddQuestion";
+import { CreatePost } from "./CreatePost";
 
 export const Answer = () => {
     const [modal,setModal] = useState(false);
@@ -27,7 +32,34 @@ export const Answer = () => {
     }
     // post show or hide
     const [status,setStatus] = useState(true);
-  
+
+    //
+    const [value, setValue] = useState(0);
+
+    const handleChange = (event, newValue) => {
+      setValue(newValue);
+    }
+
+    function TabPanel(props) {
+        const { children, value, index, ...other } = props;
+      
+        return (
+          <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`simple-tabpanel-${index}`}
+            aria-labelledby={`simple-tab-${index}`}
+            {...other}
+          >
+            {value === index && (
+              <Box sx={{ p: 3 }}>
+                <Typography>{children}</Typography>
+              </Box>
+            )}
+          </div>
+        );
+      }
+
     return (
         <div className="answer">
             <div onClick={toggleModal} className="Quora_Box">
@@ -45,27 +77,22 @@ export const Answer = () => {
                     <button className="close-modal" onClick={toggleModal}>
                        <CloseIcon/>
                     </button>
-                    <div className="header_modal">
-                        <h4>Add Question</h4>
-                        <h4>Add Post</h4>
-                    </div>
-                    <div className="section">
-                        <h4>Tips on getting good answers quickly</h4>
-                        <ul>
-                            <li>Make sure your question has not been asked already</li>
-                            <li>Keep your question short and to the point</li>
-                            <li>Double-check grammar and spelling</li>
-                        </ul>
-                    </div>
-                    <div className="user_icon">
-                    <Avatar />
-                    <ArrowRightSharpIcon/>
-                    <button><PeopleOutlineOutlinedIcon/>Public<KeyboardArrowDownOutlinedIcon/></button>
-                    </div>
-                    <input className="ques-type" type="text" placeholder="Start your question with what, How, why, etc"/>
-                
+                        <Tabs
+                                value={value}
+                                onChange={handleChange}
+                                aria-label="wrapped label tabs example"
+                                >
+                                <Tab label="Add Question" />
+                                <Tab label="Create Post" />
+                        </Tabs>
+                        <TabPanel value={value} index={0}>
+                            <AddQuestion/>
+                        </TabPanel>
+                        <TabPanel value={value} index={1}>
+                            <CreatePost/>
+                        </TabPanel>
                 </div>
-            </div>
+                </div>
             </div>
             )}
            

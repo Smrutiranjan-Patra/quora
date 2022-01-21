@@ -8,7 +8,8 @@ function App() {
   return (
     <div className="app">
       {/* <Header /> */}
-      <Header />
+      {/* <Header /> */}
+      <Router/>
     </div>
   );
 }
