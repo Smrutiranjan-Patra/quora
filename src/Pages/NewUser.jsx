@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { Header } from "../components/header";
+import Header from "../components/header";
 import { saveUser } from "../Redux/actions";
 import axios from "axios";
 

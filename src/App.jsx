@@ -7,9 +7,9 @@ import { Router } from "./Routes/Router";
 function App() {
   return (
     <div className="app">
-      {/* <Header /> */}
-      {/* <Header /> */}
-      <Router/>
+      {/* <Header />
+       */}
+      <Router />
     </div>
   );
 }

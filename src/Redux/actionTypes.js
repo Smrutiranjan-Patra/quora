@@ -1,4 +1,5 @@
 const SAVE_USER = 'SAVE_USER';
 const SAVE_TOKEN = 'SAVE_TOKEN';
+const SAVE_ID = 'SAVE_ID';
 
-export {SAVE_TOKEN, SAVE_USER};
+export {SAVE_TOKEN, SAVE_USER, SAVE_ID};

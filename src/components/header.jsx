@@ -1,28 +1,18 @@
 import React from "react";
-import "./css/header.css";
-import mainlogo from "./Images/mainlogo.png";
+import { icons } from "react-icons";
 import { NavLink } from "react-router-dom";
 
-//icons
-// import HomeIcon from "@mui/icons-material/Home";
-// import NotificationsIcon from "@mui/icons-material/Notifications";
-// import PersonIcon from "@mui/icons-material/Person";
-// import CreateIcon from "@mui/icons-material/Create";
-// import FeedIcon from "@mui/icons-material/Feed";
-// import LanguageIcon from "@mui/icons-material/Language";
+import "./css/header.css";
 
+import mainlogo from "./Images/mainlogo.png";
 
+// icons
+import { AiOutlineHome, AiOutlineSearch } from "react-icons/ai";
+import { BiNews } from "react-icons/bi";
+import { BsPencilSquare, BsGlobe } from "react-icons/bs";
+import { IoIosPeople, IoIosNotificationsOutline } from "react-icons/io";
 
 export default function Header() {
-  const iconStyle = {
-    height: "1.5em",
-    fontSize: "1.8em",
-    color: "Black"
-  };
-
-  const colorButton = (e) => {
-    console.log("working");
-  };
   return (
     <>
       <div className="header">
@@ -31,11 +21,35 @@ export default function Header() {
             <img src={mainlogo} alt="" />
           </div>
           <div className="Navbar">
-            <NavLink exact activeClassName="active-icon" to="/Home"></NavLink>
-            <NavLink exact activeClassName="active-icon" to="/following"></NavLink>
-            <NavLink exact activeClassName="active-icon" to="/answer"></NavLink>
-            <NavLink exact activeClassName="active-icon" to="/space"></NavLink>
-            <NavLink exact activeClassName="active-icon" to="/notification"></NavLink>
+            <NavLink exact activeClassName="active-icon" to="/home">
+              <AiOutlineHome className="icon" />
+            </NavLink>
+            <NavLink exact activeClassName="active-icon" to="/following">
+              <BiNews className="icon" />
+            </NavLink>
+            <NavLink exact activeClassName="active-icon" to="/answer">
+              <BsPencilSquare className="icon" />
+            </NavLink>
+            <NavLink exact activeClassName="active-icon" to="/space">
+              <IoIosPeople className="icon" />
+            </NavLink>
+            <NavLink exact activeClassName="active-icon" to="/notification">
+              <IoIosNotificationsOutline className="icon" />
+            </NavLink>
+          </div>
+          <div id="searchbar">
+            <AiOutlineSearch style={{ fontSize: "1.3em", width: "30px" }} />
+            <input type="text" placeholder="Search Quora" id="search" />
+          </div>
+          <div className="user-logo">
+            <img
+              src="https://i.picsum.photos/id/453/200/300.jpg?grayscale&hmac=6XMjNqrOjgh3bLi1LeXlqbO-SZUXcwEgaq-aUQJGhDI"
+              alt=""
+            />
+            <BsGlobe className="gicon" />
+          </div>
+          <div className="button-box">
+            <button> Add Question</button>
           </div>
         </div>
       </div>

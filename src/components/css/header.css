@@ -11,6 +11,7 @@
   box-sizing: border-box;
   width: 53%;
   display: flex;
+  align-items: center;
   padding: 2px;
 }
 
@@ -26,13 +27,79 @@
   width: 74%;
 }
 .Navbar {
+  /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 30%;
+  padding: 1%;
+  height: 35px;
 }
 
 .Navbar a {
   text-decoration: none;
-  color: Black;
+}
+.icon {
+  font-size: 1.7em;
+  color: lightslategrey;
+}
+#searchbar {
+  border: 1px solid lightgray;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  width: 35%;
+  margin: 0 0 0 1.5%;
+  z-index: 1;
+}
+
+#searchbar:focus-within {
+  outline: 1px solid lightblue;
+}
+
+#searchbar input {
+  height: 87%;
+  border: none;
+  width: 70%;
+}
+
+input:focus {
+  outline: none;
+}
+
+.user-logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 1px solid purple; */
+  height: 35px;
+  width: 7.5%;
+  margin: 0 0 0 1%;
+}
+.user-logo img {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+.gicon {
+  font-size: 1.5em;
+  color: lightslategrey;
+}
+
+.button-box {
+  height: 35px;
+  width: 11%;
+  display: grid;
+  place-items: center;
+  margin: 0 1%;
+}
+
+.button-box button {
+  color: white;
+  background-color: #a82723;
+  border: none;
+  padding: 7px;
+  border-radius: 15px;
+  width: 100%;
 }
