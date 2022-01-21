@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { icons } from "react-icons";
 import { NavLink } from "react-router-dom";
 
@@ -12,7 +12,10 @@ import { BiNews } from "react-icons/bi";
 import { BsPencilSquare, BsGlobe } from "react-icons/bs";
 import { IoIosPeople, IoIosNotificationsOutline } from "react-icons/io";
 
+const showdetails = () => {};
+
 export default function Header() {
+  const language = () => {};
   return (
     <>
       <div className="header">
@@ -46,7 +49,11 @@ export default function Header() {
               src="https://i.picsum.photos/id/453/200/300.jpg?grayscale&hmac=6XMjNqrOjgh3bLi1LeXlqbO-SZUXcwEgaq-aUQJGhDI"
               alt=""
             />
-            <BsGlobe className="gicon" />
+            <BsGlobe
+              className="gicon"
+              onClick={language}
+              onClick={showdetails}
+            />
           </div>
           <div className="button-box">
             <button> Add Question</button>
