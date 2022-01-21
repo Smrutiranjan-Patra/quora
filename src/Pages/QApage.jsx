@@ -5,7 +5,8 @@ import {
   Box,
   Text,
   VStack,
-  Stack
+  Stack,
+  StackDivider
 } from "@chakra-ui/react";
 
 import { HiOutlinePencil } from "react-icons/hi";
@@ -16,6 +17,22 @@ import { Heading, Divider } from "@chakra-ui/react";
 
 import { QaCard } from "../components/QAcard";
 import Header from "../components/header";
+
+let data = [
+  {
+    question: "whata is the new of this",
+    answers: 1,
+    id: 1,
+    lastFollowed: "1y back"
+  },
+  {
+    question: "whata is the question of this",
+    answers: 12,
+    id: 2,
+    lastFollowed: "2y back"
+  }
+];
+
 export const QApage = () => {
   return (
     <>
@@ -52,7 +69,18 @@ export const QApage = () => {
             </Box>
             <Divider borderWidth="2px" bgColor="black" />
           </Box>
-          <QaCard />
+          <Box w="550px" p="10" mt="10" h="100vh">
+            <VStack
+              divider={<StackDivider borderColor="gray.200" />}
+              spacing={4}
+              align="stretch"
+            >
+              {data.map((e, index) => {
+                console.log(e, index);
+                return <QaCard key={index} prop={e} />;
+              })}
+            </VStack>
+          </Box>
           <Box w="25%" p="10" mt="10" mr="0" h="400px">
             <VStack
               p="10"

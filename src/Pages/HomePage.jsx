@@ -6,6 +6,7 @@ import { saveUser } from "../Redux/actions";
 import axios from "axios";
 import { MainQuora } from "../components/MainQuora";
 import { QApage } from "./QApage";
+import { AnswerModal } from "../components/AnswerModal";
 export const HomePage = () => {
   const [user, setUser] = useState(null);
   const { email } = useParams();
@@ -29,9 +30,10 @@ export const HomePage = () => {
   }, []);
   return !user ? null : (
     <>
-      <Header />
-      <MainQuora />
-      {/* <QApage /> */}
+      {/* <Header />
+      <MainQuora /> */}
+      <QApage />
+      {/* <AnswerModal /> */}
     </>
   );
 };
