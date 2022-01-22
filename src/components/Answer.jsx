@@ -75,8 +75,8 @@ export const Answer = () => {
                 <CloseIcon />
               </button>
               <div className="header_modal">
-                <h4>Add Question</h4>
-                <h4>Add Post</h4>
+                <button>Add Question</button>
+                <button>Add Post</button>
               </div>
               <div className="section">
                 <h4>Tips on getting good answers quickly</h4>
