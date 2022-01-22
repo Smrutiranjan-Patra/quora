@@ -39,7 +39,7 @@ export const reducer = (state = initState, {type, payload}) => {
         ID: payload,
       };
     case SAVE_POSTS:
-      console.log ('payload', payload);
+      // console.log ('payload', payload);
       return {
         ...state,
         posts: payload,

@@ -14,7 +14,7 @@ export const NewPage = () => {
 
   useEffect(() => {
     axios
-      .post(`http://localhost:2333/users`, user)
+      .post(`https://peaceful-beach-55920.herokuapp.com/users`, user)
       .then((res) => {
         console.log("data:", res.data);
 

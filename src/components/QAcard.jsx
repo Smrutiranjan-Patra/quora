@@ -23,7 +23,7 @@ import { AnswerModal } from "./AnswerModal";
 import { Link } from "react-router-dom";
 
 export const QaCard = ({ prop }) => {
-  console.log(prop);
+  // console.log(prop);
   return (
     <>
       <Box h="104px" w="full" bg="white" p="20px">

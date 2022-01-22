@@ -14,10 +14,10 @@ function Router () {
         <Route path="/" element={<Register />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/answer" element={<QApage />} />
-        <Route path="/profile/:email" element={<HomePage />} />
+        <Route path="/profile/:email" element={<Profile />} />
         <Route path="/createUser/:email" element={<NewPage />} />
         <Route path="/answers/:id" element={<AnswerPage />} />
-        <Route path="/profile" element={<Profile />} />
+        {/* <Route path="/profile" element={<Profile />} /> */}
       </Routes>
     </div>
   );

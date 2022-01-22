@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { icons } from "react-icons";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import "./css/header.css";
 
@@ -11,10 +11,13 @@ import { AiOutlineHome, AiOutlineSearch } from "react-icons/ai";
 import { BiNews } from "react-icons/bi";
 import { BsPencilSquare, BsGlobe } from "react-icons/bs";
 import { IoIosPeople, IoIosNotificationsOutline } from "react-icons/io";
+import { useSelector } from "react-redux";
 
 const showdetails = () => {};
 
 export default function Header() {
+  const { email, profile_pic } = useSelector((store) => store.user);
+  console.log(email, profile_pic);
   const language = () => {};
   return (
     <>
@@ -45,14 +48,13 @@ export default function Header() {
             <input type="text" placeholder="Search Quora" id="search" />
           </div>
           <div className="user-logo">
-            <img
-              src="https://i.picsum.photos/id/453/200/300.jpg?grayscale&hmac=6XMjNqrOjgh3bLi1LeXlqbO-SZUXcwEgaq-aUQJGhDI"
-              alt=""
-            />
+            <Link to={`/profile/${email}`}>
+              <img src={profile_pic} alt="" />
+            </Link>
             <BsGlobe
               className="gicon"
               onClick={language}
-              onClick={showdetails}
+              // onClick={showdetails}
             />
           </div>
           <div className="button-box">

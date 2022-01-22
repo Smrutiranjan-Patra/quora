@@ -44,9 +44,9 @@ export const setPostData = data => {
 
 export const getPostData = () => dispatch => {
   return axios
-    .get ('http://localhost:2333/post')
+    .get ('https://peaceful-beach-55920.herokuapp.com/post')
     .then (res => {
-      console.log ('res', res);
+      // console.log ('res', res);
       // savePosts (res.data);
       dispatch (savePosts (res.data));
     })
@@ -57,9 +57,9 @@ export const getPostData = () => dispatch => {
 
 export const postQue = payload => dispatch => {
   return axios
-    .post ('http://localhost:2333/post', payload)
+    .post ('https://peaceful-beach-55920.herokuapp.com/post', payload)
     .then (res => {
-      console.log (res);
+      // console.log (res);
       setPostData (res);
       dispatch (res);
     })
@@ -70,7 +70,7 @@ export const postQue = payload => dispatch => {
 
 export const createUser = payload => dispatch => {
   return axios
-    .post ('http://localhost:2333/users', payload)
+    .post ('https://peaceful-beach-55920.herokuapp.com/users', payload)
     .then (res => {
       dispatch (saveToken (res.token));
     })

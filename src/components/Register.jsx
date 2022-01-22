@@ -8,7 +8,7 @@ export const Register = () => {
   let navigate = useNavigate();
   const signIn = () => {
     console.log("hello");
-    fetch("https://localhost:2333/auth/google")
+    fetch("https://peaceful-beach-55920.herokuapp.com/auth/google")
       .then((res) => {
         return res.json();
       })
