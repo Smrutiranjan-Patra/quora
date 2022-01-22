@@ -1,0 +1,35 @@
+.notify {
+  flex: 0.4;
+  justify-content: center;
+  margin-top: 32px;
+}
+.header_div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #636363;
+}
+.header_div > h4 {
+  align-items: left;
+  padding-bottom: 5px;
+}
+.header_div > p {
+  font-size: 15px;
+  padding: 0px;
+}
+.header_div > p:hover {
+  text-decoration: underline;
+}
+.rightSidebar_options {
+  display: flex;
+  cursor: pointer;
+  background-color: white;
+  flex-direction: column;
+}
+.sidebar__content {
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar__contentTitle {
+  justify-content: space-evenly;
+}

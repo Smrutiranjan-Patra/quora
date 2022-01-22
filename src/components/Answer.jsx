@@ -18,6 +18,7 @@ import { Textarea, Button, Input } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { getPostData, postQue } from "../Redux/actions";
 
+
 export const Answer = () => {
   const data = useSelector((store) => store.posts);
 

@@ -1,4 +1,4 @@
-import "./css/LeftSidebar.css";
+ import "./css/LeftSidebar.css";
 import { leftSideBarData } from "../leftSidebardata.js";
 import AddIcon from '@mui/icons-material/Add';
 import { useState } from "react";

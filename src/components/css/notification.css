@@ -1,0 +1,11 @@
+.notification {
+  margin-top: 50px;
+  background-color: white;
+  height: 100vh;
+}
+
+.notify-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
