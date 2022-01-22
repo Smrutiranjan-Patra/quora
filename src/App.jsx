@@ -8,12 +8,11 @@ import { Router } from "./Routes/Router";
 function App() {
   return (
     <div className="app">
-      <Header />
-      
-      {/* <Router /> */}
-      <Notification />
-    </div>
+      {/* <Header /> */}
 
+      <Router />
+      {/* <Notification /> */}
+    </div>
   );
 }
 

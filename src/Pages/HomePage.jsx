@@ -16,7 +16,7 @@ export const HomePage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     axios
-      .get(`http://localhost:2333/users/profile/${email}`)
+      .get(`https://peaceful-beach-55920.herokuapp.com/users/profile/${email}`)
       .then((res) => {
         console.log("data:", res.data);
 
