@@ -48,11 +48,11 @@ Quora is an American social question-and-answer website based in Mountain View, 
 
 
 
-* [Nilesh Kumar D](https://github.com/)
-* [Madhurima Banerjee](https://github.com/)
-* [Smrutiranjan Patra](https://github.com/)
-* [Vishnu Dutta](https://github.com/)
-* [Abhishek Soni](https://github.com/)
+* [Nilesh Kumar D](https://github.com/nkil123)
+* [Madhurima Banerjee](https://github.com/MADHURIMA956)
+* [Smrutiranjan Patra](https://github.com/Smrutiranjan-Patra)
+* [Vishnu Dutta](https://github.com/vishnudutta1)
+* [Abhishek Soni](https://github.com/abhi270794)
 
 
 ## Glimpse of our work
