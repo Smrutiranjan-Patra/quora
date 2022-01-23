@@ -18,7 +18,6 @@ import { Textarea, Button, Input } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { getPostData, postQue } from "../Redux/actions";
 
-
 export const Answer = () => {
   const data = useSelector((store) => store.posts);
 
@@ -43,21 +42,22 @@ export const Answer = () => {
     upVotes: 0
   });
   const dispatch = useDispatch();
-
+  console.log("why rerneders");
   useEffect(() => {
     dispatch(getPostData());
-  }, [data]);
+  }, []);
 
   const handleSubmit = () => {
     dispatch(postQue(form));
-    dispatch(getPostData());
+    // dispatch(getPostData());
   };
 
   const handleChange = (e) => {
+    e.preventDefault();
     const { value, name } = e.target;
     setForm({ ...form, [name]: value });
   };
-  console.log("data", data);
+  // console.log("data", data);
   return (
     <div className="answer">
       <div onClick={toggleModal} className="Quora_Box">

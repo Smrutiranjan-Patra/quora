@@ -17,6 +17,7 @@ passport.use (
       passReqToCallback: true,
     },
     async function (request, accessToken, refreshToken, profile, done) {
+      // console.log (profile, 'profile');
       let user = await User.findOne ({email: profile._json.email})
         .lean ()
         .exec ();
@@ -25,6 +26,8 @@ passport.use (
         user = await User.create ({
           email: profile._json.email,
           password: uuid_v4 (),
+          name: profile.displayName,
+          profile_pic: profile.picture,
         });
       }
       const token = newToken (user);

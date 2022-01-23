@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { icons } from "react-icons";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import "./css/header.css";
 
@@ -11,11 +11,14 @@ import { AiOutlineHome, AiOutlineSearch } from "react-icons/ai";
 import { BiNews } from "react-icons/bi";
 import { BsPencilSquare, BsGlobe } from "react-icons/bs";
 import { IoIosPeople, IoIosNotificationsOutline } from "react-icons/io";
+import { useSelector } from "react-redux";
 
 
 
 export default function Header() {
-
+  const { email, profile_pic } = useSelector((store) => store.user);
+  console.log(email, profile_pic);
+  const language = () => {};
   return (
     <>
       <div className="header">

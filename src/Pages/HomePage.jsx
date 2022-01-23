@@ -10,27 +10,7 @@ import { shallowEqual, useSelector } from "react-redux";
 import { AnswerModal } from "../components/AnswerModal";
 
 export const HomePage = () => {
-  const [user, setUser] = useState(null);
-  const temp = useSelector((store) => store.userPresent);
-  let { email } = useParams();
-  const dispatch = useDispatch();
-  useEffect(() => {
-    axios
-      .get(`http://localhost:2333/users/profile/${email}`)
-      .then((res) => {
-        console.log("data:", res.data);
-
-        localStorage.setItem("token", res.data.token);
-        localStorage.setItem("email", res.data.user);
-        setUser(res.data.user);
-        dispatch(saveUser(res.data.user));
-      })
-      .catch((err) => {
-        console.log("err:", err);
-      });
-  }, []);
-
-  return !user ? null : (
+  return (
     <>
       <Header />
       <MainQuora />

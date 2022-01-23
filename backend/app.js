@@ -66,9 +66,9 @@ app.get (
   }),
   async function (req, res) {
     //authenticated the user
-    // console.log ('res', req.user);
+    // console.log ('res', res);
     const user = await User.find ({email: req.user.email});
-    console.log (req.user);
+    console.log (req.user, 'user');
     if (user.length > 0) {
       res.redirect (`http://localhost:3000/profile/${req.user.user.email}`);
     } else {
