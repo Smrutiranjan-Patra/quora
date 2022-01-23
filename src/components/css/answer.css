@@ -258,3 +258,56 @@ hr {
   border: none;
   border-bottom: 1px solid rgb(105, 105, 110) !important ;
 }
+
+.comment_info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  padding: 20px 10px;
+  border-radius: 5px;
+  border: 1px solid #dee0e1;
+}
+.comment_sec {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #8284a8;
+  padding-bottom: 20px;
+}
+#show {
+  display: none;
+}
+#hide {
+  display: block;
+}
+.comment_sec > button {
+  background-color: blue;
+  color: white;
+  padding: 5px 10px;
+  width: 120px;
+  border-radius: 25px;
+  border: none;
+}
+.comment_sec > input {
+  width: 70%;
+  margin: 0 10px;
+  border-radius: 10px;
+  border: none;
+}
+.each_List {
+  display: flex;
+  flex-direction: column;
+}
+.each_List > p {
+  padding: 0 20px;
+  margin: 0px;
+}
+.name {
+  display: flex;
+  align-items: left;
+  padding: 20px 10px;
+}
+.name > h4 {
+  padding: 0 10px;
+  margin-top: 5px;
+}

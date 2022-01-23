@@ -58,6 +58,29 @@ export const Answer = () => {
     setForm({ ...form, [name]: value });
   };
   // console.log("data", data);
+  const [click, setClick] = useState(false);
+  const [incComment , setIncComment] = useState(0);
+
+  const handleClick = () => {
+    setClick(!click);
+  }
+
+  const [comment , setComment ] = useState("");
+  const [input , setInput] = useState([]);
+
+  const addComment = () => {
+    if(!comment){
+
+    }else{
+      setInput([...input , comment]);
+      setComment(" ");
+      setIncComment(incComment+1)
+
+    }
+   
+  }
+
+
   return (
     <div className="answer">
       <div onClick={toggleModal} className="Quora_Box">
@@ -151,6 +174,7 @@ export const Answer = () => {
                 status?  <div className="post"><div/> :null
             } */}
       {data.map((d) => (
+        <div>
         <div className="post">
           <div className="post_1stdiv">
             <div className="post_info">
@@ -197,9 +221,9 @@ export const Answer = () => {
                 {" "}
                 <RepeatOutlinedIcon />1
               </button>
-              <button className="btn_right">
+              <button onClick={handleClick} className="btn_right">
                 {" "}
-                <ChatBubbleOutlineOutlinedIcon />4
+                <ChatBubbleOutlineOutlinedIcon />{incComment}
               </button>
             </div>
             <div className="icon_right">
@@ -207,12 +231,37 @@ export const Answer = () => {
                 {" "}
                 <SendSharpIcon />
               </button>
-              <button className="btn_right">
+              <button className="btn_right" >
                 <MoreHorizOutlinedIcon />
               </button>
             </div>
           </div>
         </div>
+        <div className="comment_info" id={click ? "hide" : "show" }>
+          
+          <div className="comment_sec">
+          <Avatar/>
+          <input value={comment} onChange={(e)  => setComment(e.target.value)} type="text" placeholder="Add a comment..." />
+          <button onClick={addComment} >Add Comment</button>
+          </div>
+          <div className="comment_list">
+            {
+              input.map((d,id) => (
+                  <div key={id} className="each_List">
+                  <div className="name">
+                    <Avatar/>
+                   <h4>username</h4>
+                  </div>
+                   <p>{d}</p>
+                 </div>
+                
+              ))
+            }
+        
+          </div>
+        </div>
+        </div>
+
       ))}
     </div>
   );
