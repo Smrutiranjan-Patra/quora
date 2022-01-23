@@ -18,6 +18,17 @@ import { RiDraftFill } from "react-icons/ri";
 export default function Header() {
   const { email, profile_pic } = useSelector((store) => store.user);
 
+  const [click, setClick] = useState(false);
+  const [click1, setclicks] = useState(false);
+
+  const handleclick = () => {
+    setClick(!click);
+  };
+
+  const handleclick1 = () => {
+    setclicks(!click1);
+  };
+
   return (
     <>
       <div className="header">
@@ -53,14 +64,15 @@ export default function Header() {
             <img
               src="https://i.picsum.photos/id/453/200/300.jpg?grayscale&hmac=6XMjNqrOjgh3bLi1LeXlqbO-SZUXcwEgaq-aUQJGhDI"
               alt="user"
+              onClick={handleclick1}
             />
-            <BsGlobe id="gicon" className="gicon" />
+            <BsGlobe id="gicon" className="gicon" onClick={handleclick} />
           </div>
           <div className="button-box">
             <button> Add Question</button>
           </div>
         </div>
-        <ul className="dropdown">
+        <ul className="dropdown" id={click ? "hide" : "show"}>
           <li className="icon">Language</li>
           <li className="icon">
             <span id="lang">EN</span>
@@ -71,9 +83,7 @@ export default function Header() {
           <li className="icon">Select language</li>
         </ul>
 
-        {/* second */}
-
-        <ul className="dropdown1">
+        <ul className="dropdown1" id={click1 ? "hide1" : "show1"}>
           <li className="dropdown_li">
             <div id="firstname">
               <img
@@ -120,7 +130,22 @@ export default function Header() {
               <li className="inli">Logout</li>
             </ul>
           </li>
-          <li className="dropdown_li"></li>
+          <li className="dropdown_li1">
+            <div>
+              <span className="">About</span>
+              <span className="">Career</span>
+              <span className="">Terms</span>
+              <span className="">Privacy</span>
+            </div>
+            <div>
+              <span className="">Acceptable Use</span>
+              <span className="">Businesses</span>
+              <span className="">Press</span>
+            </div>
+            <div>
+              <span className="">Your add Choices</span>
+            </div>
+          </li>
         </ul>
       </div>
     </>
