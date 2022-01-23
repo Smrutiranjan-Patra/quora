@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import "./css/header.css";
 
@@ -7,10 +8,12 @@ import mainlogo from "./Images/mainlogo.png";
 
 // icons
 import { AiOutlineHome, AiOutlineSearch } from "react-icons/ai";
-import { BiNews } from "react-icons/bi";
-import { BsPencilSquare, BsGlobe } from "react-icons/bs";
+import { BsPencilSquare, BsGlobe, BsFillBookmarksFill } from "react-icons/bs";
 import { IoIosPeople, IoIosNotificationsOutline } from "react-icons/io";
-import { useSelector } from "react-redux";
+import { BiNews, BiMessageRoundedDots, BiDollar } from "react-icons/bi";
+import { FiSpeaker } from "react-icons/fi";
+import { GoGraph } from "react-icons/go";
+import { RiDraftFill } from "react-icons/ri";
 
 export default function Header() {
   const { email, profile_pic } = useSelector((store) => store.user);
@@ -50,7 +53,6 @@ export default function Header() {
             <img
               src="https://i.picsum.photos/id/453/200/300.jpg?grayscale&hmac=6XMjNqrOjgh3bLi1LeXlqbO-SZUXcwEgaq-aUQJGhDI"
               alt="user"
-
             />
             <BsGlobe id="gicon" className="gicon" />
           </div>
@@ -58,15 +60,67 @@ export default function Header() {
             <button> Add Question</button>
           </div>
         </div>
-        <ul className="dropdown" >
+        <ul className="dropdown">
           <li className="icon">Language</li>
           <li className="icon">
             <span id="lang">EN</span>
-            <span>English</span>
+            <span id="language">English</span>
             <input type="checkbox" checked="checked" />
           </li>
           <li className="icon">Add language</li>
           <li className="icon">Select language</li>
+        </ul>
+
+        {/* second */}
+
+        <ul className="dropdown1">
+          <li className="dropdown_li">
+            <div id="firstname">
+              <img
+                src="https://i.picsum.photos/id/453/200/300.jpg?grayscale&hmac=6XMjNqrOjgh3bLi1LeXlqbO-SZUXcwEgaq-aUQJGhDI"
+                alt=""
+              />
+              <h3>Smrutiranjan Patra</h3>
+            </div>
+          </li>
+          <li className="dropdown_li">
+            <ul id="list1">
+              <li>
+                <BiMessageRoundedDots className="lefticon" />
+                <p>Message</p>
+              </li>
+              <li>
+                <FiSpeaker className="lefticon" />
+                <p>Create Ad</p>
+              </li>
+              <li>
+                <BiDollar className="lefticon" />
+                <p>Monetiztion</p>
+              </li>
+              <li>
+                <GoGraph className="lefticon" />
+                <p>Your content & stats</p>
+              </li>
+              <li>
+                <BsFillBookmarksFill className="lefticon" />
+                <p>Bookmarks</p>
+              </li>
+              <li>
+                <RiDraftFill className="lefticon" />
+                <p>Drafts</p>
+              </li>
+            </ul>
+          </li>
+          <li className="dropdown_li">
+            <ul className="indropli">
+              <li className="inli">Dark mode</li>
+              <li className="inli">Setting</li>
+              <li className="inli">Language</li>
+              <li className="inli">Help</li>
+              <li className="inli">Logout</li>
+            </ul>
+          </li>
+          <li className="dropdown_li"></li>
         </ul>
       </div>
     </>

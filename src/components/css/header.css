@@ -131,6 +131,7 @@ input:focus {
   margin-left: 29.5%;
   box-shadow: 0 0 3px #aaa;
   z-index: 1;
+  display: none;
 }
 .dropdown::after {
   content: "";
@@ -171,10 +172,16 @@ input:focus {
 
 #lang {
   background-color: #2b93ec;
-  padding: 6px;
+  padding: 10px;
   color: white;
   border-radius: 50%;
+  margin-left: -5%;
 }
+
+#language {
+  margin-left: -20%;
+}
+
 input[type="checkbox"] {
   appearance: none;
   background-color: #fff;
@@ -184,4 +191,69 @@ input[type="checkbox"] {
   border: 0.15em solid rgb(71, 71, 238);
   border-radius: 50%;
   background-image: url(../Images/check.png);
+}
+
+.dropdown1 {
+  width: 220px;
+  height: auto;
+  padding-top: 0px;
+  padding-left: 0px;
+  position: absolute;
+  background-color: #fff;
+  margin-top: 66px;
+  margin-left: 29.5%;
+  box-shadow: 0 0 3px #aaa;
+  z-index: 1;
+}
+
+.dropdown_li:nth-child(1) {
+  padding: 13px 6px 0;
+}
+
+.dropdown_li {
+  border-bottom: 1px solid #ccc;
+  list-style-type: none;
+}
+
+#firstname {
+  display: flex;
+  flex-direction: column;
+  padding: 1% 5%;
+}
+
+#firstname img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin: 0 0% -10px;
+}
+#list1 {
+  padding: 0;
+}
+
+#list1 li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 0px 19px;
+}
+
+#list1 li:hover {
+  background-color: rgba(204, 204, 204, 0.2);
+}
+
+.lefticon {
+  margin-right: 4%;
+}
+.indropli {
+  padding: 0;
+}
+
+.indropli li {
+  list-style-type: none;
+  padding: 3px 8%;
+}
+
+.indropli li:hover {
+  background-color: rgba(204, 204, 204, 0.2);
 }
