@@ -131,7 +131,6 @@ input:focus {
   margin-left: 29.5%;
   box-shadow: 0 0 3px #aaa;
   z-index: 1;
-  display: none;
 }
 .dropdown::after {
   content: "";
