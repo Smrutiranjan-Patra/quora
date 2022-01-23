@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { icons } from "react-icons";
 import { Link, NavLink } from "react-router-dom";
 
 import "./css/header.css";
@@ -13,12 +12,9 @@ import { BsPencilSquare, BsGlobe } from "react-icons/bs";
 import { IoIosPeople, IoIosNotificationsOutline } from "react-icons/io";
 import { useSelector } from "react-redux";
 
-
-
 export default function Header() {
   const { email, profile_pic } = useSelector((store) => store.user);
-  console.log(email, profile_pic);
-  const language = () => {};
+
   return (
     <>
       <div className="header">
@@ -40,7 +36,10 @@ export default function Header() {
               <IoIosPeople className="icon" title="Space" />
             </NavLink>
             <NavLink exact activeClassName="active-icon" to="/notification">
-              <IoIosNotificationsOutline className="icon" title="Notification" />
+              <IoIosNotificationsOutline
+                className="icon"
+                title="Notification"
+              />
             </NavLink>
           </div>
           <div id="searchbar">
@@ -50,7 +49,8 @@ export default function Header() {
           <div className="user-logo">
             <img
               src="https://i.picsum.photos/id/453/200/300.jpg?grayscale&hmac=6XMjNqrOjgh3bLi1LeXlqbO-SZUXcwEgaq-aUQJGhDI"
-              alt="user" id="uicon"
+              alt="user"
+
             />
             <BsGlobe id="gicon" className="gicon" />
           </div>
@@ -58,6 +58,16 @@ export default function Header() {
             <button> Add Question</button>
           </div>
         </div>
+        <ul className="dropdown" >
+          <li className="icon">Language</li>
+          <li className="icon">
+            <span id="lang">EN</span>
+            <span>English</span>
+            <input type="checkbox" checked="checked" />
+          </li>
+          <li className="icon">Add language</li>
+          <li className="icon">Select language</li>
+        </ul>
       </div>
     </>
   );
