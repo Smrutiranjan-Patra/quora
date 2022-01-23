@@ -11,7 +11,7 @@ function App() {
       <Header />
       
       {/* <Router /> */}
-      <Notification />
+      {/* <Notification /> */}
     </div>
 
   );

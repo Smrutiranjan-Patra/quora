@@ -12,10 +12,10 @@ import { BiNews } from "react-icons/bi";
 import { BsPencilSquare, BsGlobe } from "react-icons/bs";
 import { IoIosPeople, IoIosNotificationsOutline } from "react-icons/io";
 
-const showdetails = () => {};
+
 
 export default function Header() {
-  const language = () => {};
+
   return (
     <>
       <div className="header">
@@ -25,19 +25,19 @@ export default function Header() {
           </div>
           <div className="Navbar">
             <NavLink exact activeClassName="active-icon" to="/home">
-              <AiOutlineHome className="icon" />
+              <AiOutlineHome className="icon" title="Home" />
             </NavLink>
             <NavLink exact activeClassName="active-icon" to="/following">
-              <BiNews className="icon" />
+              <BiNews className="icon" title="following" />
             </NavLink>
             <NavLink exact activeClassName="active-icon" to="/answer">
-              <BsPencilSquare className="icon" />
+              <BsPencilSquare className="icon" title="Answer" />
             </NavLink>
             <NavLink exact activeClassName="active-icon" to="/space">
-              <IoIosPeople className="icon" />
+              <IoIosPeople className="icon" title="Space" />
             </NavLink>
             <NavLink exact activeClassName="active-icon" to="/notification">
-              <IoIosNotificationsOutline className="icon" />
+              <IoIosNotificationsOutline className="icon" title="Notification" />
             </NavLink>
           </div>
           <div id="searchbar">
@@ -47,13 +47,9 @@ export default function Header() {
           <div className="user-logo">
             <img
               src="https://i.picsum.photos/id/453/200/300.jpg?grayscale&hmac=6XMjNqrOjgh3bLi1LeXlqbO-SZUXcwEgaq-aUQJGhDI"
-              alt=""
+              alt="user" id="uicon"
             />
-            <BsGlobe
-              className="gicon"
-              onClick={language}
-              onClick={showdetails}
-            />
+            <BsGlobe id="gicon" className="gicon" />
           </div>
           <div className="button-box">
             <button> Add Question</button>
