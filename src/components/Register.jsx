@@ -46,7 +46,7 @@ export const Register = () => {
                 src="https://media-public.canva.com/MADnBiAubGA/3/screen.svg"
                 alt=""
               />
-              <a href="http://localhost:2333/auth/google">
+              <a href="https://quora-roan.vercel.app/">
                 Continue With Google
               </a>
             </div>
